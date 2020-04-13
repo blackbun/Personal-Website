@@ -1,0 +1,609 @@
+//  MIXINS
+
+@mixin color($color: null, $bgColor: null) {
+  color: $color;
+  background-color: $bgColor;
+}
+
+@mixin size($height: null, $width: null) {
+  height: $height;
+  width: $width;
+}
+
+@mixin margin($margin) {
+  margin: $margin;
+}
+
+@mixin marginDetail($marginTop: null, $marginRight: null,
+$marginBottom: null, $marginLeft: null) {
+  margin: $marginTop $marginRight $marginBottom $marginLeft;
+}
+
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+@mixin paddingDetail($paddingTop: null, $paddingRight: null,
+$paddingBottom: null, $paddingLeft: null) {
+  padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
+}
+
+@mixin border($border) {
+  border: $border;
+}
+
+@mixin borderDetail($bottom: null, $radius: null) {
+  border-bottom: $bottom;
+  border-radius: $radius;
+}
+
+@mixin position($position) {
+  position: $position;
+}
+
+@mixin topLeft($top: null, $left: null) {
+  top: $top;
+  left: $left;
+}
+
+@mixin centerNav($topPercent, $leftPercent, $margin) {
+  @include topLeft($topPercent, $leftPercent);
+  @include marginDetail($margin, 0px, 0px, $margin);
+}
+
+@mixin cursor($cursor) {
+  cursor: $cursor;
+}
+
+@mixin z-index($index) {
+  z-index: $index;
+}
+
+@mixin transition($time) {
+  transition: $time;
+}
+
+@mixin text($size: null, $align: null, $decoration: null, $style: null, $weight: null) {
+  font-size: $size;
+  text-align: $align;
+  text-decoration: $decoration;
+  font-style: $style;
+  font-weight: $weight;
+}
+
+@mixin display($type) {
+  display: $type;
+}
+
+@mixin overflow($x: null, $y: null) {
+  overflow-x: $x;
+  overflow-y: $y;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
+@mixin maxHeight($maxHeight) {
+  max-height: $maxHeight;
+}
+
+@mixin float($float){
+  float: $float;
+}
+
+
+//  VARIABLES
+
+$colorRed: red;
+$logoMargin: -32px;
+$menuButtonMargin: -15px;
+$logoSize: 75px;
+$sidebarColorBg: #303030;
+$uclaBlue: #3284BF;
+$uclaYellow: #ffe800;
+$oregonStateOrange: #dc4405;
+$schoolInfoBg: #D8D8D8;
+$lightGray: #E8E8E8;
+
+
+//  SELECTORS
+
+body {
+  @include margin(0px !important);
+  @include overflow($x: hidden, $y: scroll);
+  @include size($width: 100vw);
+}
+
+.container {
+  @include size($width: 100vw !important);
+  @include margin(0px !important);
+  @include padding(0px !important);
+}
+
+.row {
+  @include margin(0px !important);
+}
+
+.col-12 {
+  @include padding(0px !important);
+}
+
+.myCarousel {
+  @media screen and (max-width: 767px) {
+    @include size(250px);
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @include size(400px);
+  }
+  @media screen and (min-width: 992px) and (max-width: 1279px) {
+    @include size(750px);
+  }
+  @media screen and (min-width: 1280px) {
+    @include size(900px);
+  }
+
+  @include maxHeight(900px);
+}
+
+.myUcla {
+  @media screen and (max-width: 767px) {
+    @include size(810px);
+  }
+  @include color($bgColor: $uclaBlue);
+  @include size(500px);
+
+  .uclaTitle {
+    @media screen and (max-width: 991px) {
+      @include text($size: 45px);
+    }
+    @include margin(0px !important);
+    @include color($uclaYellow);
+    @include text($size: 60px, $align: center, $weight: bold);
+    @include paddingDetail(30px, 0px, 0px, 0px !important);
+  }
+}
+
+.myDeveloper {
+  @media screen and (max-width: 992px) {
+    @include size(425px);
+  }
+  @include color(black, $lightGray);
+  @include size(500px);
+  @include text($align: right);
+  @include paddingDetail(99px 0px 0px 0px !important);
+}
+
+.devTitle {
+  @media screen and (max-width: 992px) {
+    @include text($size: 60px);
+  }
+  @include size($width: 84%);
+  @include text($size: 100px);
+  @include paddingDetail(80px, 0px, 0px, 0px !important);
+  @include margin(0px !important);
+}
+
+.devWord {
+  @media screen and (max-width: 992px) {
+    @include text($size: 40px);
+  }
+  @include text($size: 55px);
+  @include size($width: 84%);
+  @include paddingDetail(50px, 0px, 40px, 0px !important);
+  @include marginDetail(0px !important);
+}
+
+.myOregonState {
+  @media screen and (max-width: 400px) {
+    @include size(880px);
+  }
+  @media screen and (min-width: 401px) {
+    @include size(830px);
+  }
+  @media screen and (min-width: 768px) {
+    @include size(500px);
+  }
+  @include color($bgColor: $oregonStateOrange);
+
+  .oregonStateTitle {
+    @media screen and (max-width: 991px) {
+      @include text($size: 45px);
+    }
+    @include margin(0px);
+    @include color(black);
+    @include text($size: 60px, $align: center, $weight: bold);
+    @include paddingDetail(30px, 0px, 0px, 0px !important);
+  }
+}
+
+.myDigitalFitnessApp {
+  @media screen and (max-width: 768px) {
+    .btn {
+      @include text($size: 30px !important);
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+    .btn {
+      @include text($size: 45px !important);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .btn {
+      @include text($size: 60px !important);
+    }
+  }
+  @include text($align: center);
+
+  .btn {
+    @include cursor(pointer);
+  }
+}
+
+.myMrJumpyPenguinApp {
+  @media screen and (max-width: 768px) {
+    .btn {
+      @include text($size: 30px !important);
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+    .btn {
+      @include text($size: 45px !important);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .btn {
+      @include text($size: 60px !important);
+    }
+  }
+  @include text($align: center);
+
+  .btn {
+    @include cursor(pointer);
+  }
+}
+
+.myNav {
+  @include color(white);
+  @include size(100px);
+  @include color($bgColor: black);
+  @include position(fixed !important);
+  @include topLeft(0px);
+  @include size($width: 100%);
+  @include z-index(9999);
+
+  ul {
+    @include padding(0px !important);
+  }
+}
+
+.myMenuButton {
+  @include position(absolute);
+  @include topLeft(50%, 50px);
+  @include marginDetail($menuButtonMargin, 0px, 0px, 0px !important);
+  @include cursor(pointer);
+
+  &.fas {
+    @include color(white);
+  }
+
+}
+
+.myLogo {
+  @include size($logoSize, $logoSize);
+  @include position(absolute);
+  @include centerNav(50%, 50%, $logoMargin);
+}
+
+.mySidebar {
+  @include size(100%, 250px);
+  @include position(fixed);
+  @include color(white);
+  @include z-index(5555);
+  @include topLeft(100px, 0px);
+  @include color($bgColor: black);
+  @include overflow($x: hidden);
+  @include transition(0.3s);
+
+  a {
+    @include paddingDetail(10px 0px 10px 50px !important);
+    @include color(white);
+    @include display(block);
+    @include transition(0.2s);
+    @include text(22px, left, none);
+  }
+
+  ul {
+    @include text($decoration: none);
+    @include padding(0px !important);
+  }
+
+  a:hover {
+    @include color($bgColor: $sidebarColorBg);
+    @include text($decoration: none);
+    @include color(white);
+  }
+}
+
+.aboutPage {
+  @media screen and (max-width: 400px) {
+    @include size(830px);
+  }
+  @include paddingDetail(99px, 0px, 0px, 0px !important);
+  @include color($bgColor: $lightGray);
+  @include size(750px);
+}
+
+.portfolioPage {
+  @include paddingDetail(99px, 0px, 0px, 0px !important);
+  @include color($bgColor: $lightGray);
+  @include size(900px);
+}
+
+.contactPage {
+  @media screen and (max-width: 767px) {
+    @include size(625px);
+  }
+  @include size(1050px);
+  @include paddingDetail(99px, 0px, 0px, 0px !important);
+  @include color($bgColor: $lightGray);
+}
+
+.carouselPic {
+  @media screen and (max-width: 767px) {
+    @include size(250px);
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px){
+    @include size(400px);
+  }
+  @media screen and (min-width: 992px) and (max-width: 1279px) {
+    @include size(750px);
+  }
+  @media screen and (min-width: 1280px) {
+    @include size(900px);
+  }
+}
+
+.myCourses {
+  @media screen and (max-width: 768px) {
+    @include size($width: 90%);
+    @include paddingDetail(50px, 5px, 0px, 10% !important);
+  }
+  @include paddingDetail(50px, 10px, 0px, 10px !important);
+
+  ul {
+    @include maxHeight(325px);
+    @include overflow($y: scroll);
+  }
+
+  li {
+    @include color($bgColor: $schoolInfoBg);
+    @include paddingDetail(25px, 0px, 25px, 20px !important);
+  }
+}
+
+.mySchoolInfo {
+  @media screen and (max-width: 768px) {
+    @include paddingDetail(40px, 0px, 0px, 0px !important);
+  }
+  @media screen and (min-width: 769px) and (max-width: 991px) {
+    @include text($size: 30px);
+  }
+  @include paddingDetail(100px, 0px, 0px, 0px !important);
+  @include text($size: 40px, $align: center, $weight: bold);
+  @include color(black);
+}
+
+.myApps {
+  @media screen and (max-width: 991px) {
+    @include paddingDetail(100px, 0px, 0px, 0px !important);
+  }
+  @include color($bgColor: black);
+  @include size(400px);
+  @include paddingDetail(175px, 0px, 0px, 0px !important);
+}
+
+.myModal {
+  @include topLeft($top: 20%);
+
+  .modal-header {
+    @include borderDetail($bottom: none);
+    @include display(inline);
+  }
+
+  .modal-content {
+    @include color($bgColor: $lightGray);
+  }
+
+  .modal-body {
+    @include padding(15px !important);
+  }
+
+  img {
+    @media screen and (min-width: 768px) {
+      @include size(200px, 200px);
+    }
+    @media screen and (min-width: 401px) {
+      @include size(150px, 150px);
+    }
+    @media screen and (max-width: 400px) {
+      @include size(125px, 125px);
+    }
+  }
+}
+
+.myModalText {
+  @include paddingDetail(0px, 25px, 0px, 10px !important);
+}
+
+.myModalHeader {
+  h5 {
+    @include text($size: 35px !important, $align: center !important);
+  }
+}
+
+.cancelAppModal {
+  @include float(right);
+  @include marginDetail(0px, 25px, 0px, 0px !important);
+}
+
+.myModalButtons {
+  @include paddingDetail(10px, 0px, 0px, 0px !important);
+}
+
+.contactImage {
+  img {
+    @media screen and (min-width: 951px) {
+      @include size(667px, 500px);
+    }
+    @media screen and (min-width: 768px) and (max-width: 950px) {
+      @include size(533px, 400px);
+    }
+    @media screen and (min-width: 391px) and (max-width: 767px) {
+      @include size(267px, 200px);
+    }
+    @media screen and (max-width: 390px) {
+      @include size(200px, 150px);
+    }
+    @include marginDetail(0px, 0px, 50px, 10% !important);
+    @include borderDetail($radius: 10px);
+  }
+}
+
+.contactTitle {
+  @include text($size: 50px, $align: center, $weight: bold);
+  @include paddingDetail(20px, 0px, 40px, 0px !important);
+}
+
+.contactEmail {
+  @media screen and (max-width: 767px) {
+    @include paddingDetail(20px, 0px, 0px, 5% !important);
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @include paddingDetail(20px, 0px, 50px, 25% !important);
+  }
+  @media screen and (min-width: 992px) {
+    @include paddingDetail(20px, 0px, 50px, 40% !important);
+  }
+  @include text($size: 20px);
+}
+
+.githubButton {
+  @media screen and (max-width: 767px) {
+    @include paddingDetail(30px, 0px, 0px, 5% !important);
+  }
+  @include paddingDetail(200px, 0px, 0px, 5% !important);
+  .btn {
+    @include cursor(pointer);
+  }
+
+  a {
+    @include color(black);
+    @include text($decoration: none);
+
+  }
+
+  a:hover {
+    @include text($decoration: none);
+    @include color(black);
+  }
+}
+
+.linkedInButton {
+  @media screen and (max-width: 390px) {
+    @include paddingDetail(50px, 0px, 0px, 5% !important);
+  }
+  @include paddingDetail(100px, 0px, 0px, 5% !important);
+  .btn {
+    @include cursor(pointer);
+  }
+
+  a {
+    @include color(black);
+    @include text($decoration: none);
+
+  }
+
+  a:hover {
+    @include text($decoration: none);
+    @include color(black);
+  }
+}
+
+.portfolioApp {
+  @include border(1px solid black);
+  @include size(200px, 100%);
+  @include text($decoration: none);
+  @include padding(0px !important);
+
+  a {
+    @include text($decoration: none);
+    @include color(black);
+  }
+
+  a:hover {
+    @include text($decoration: none);
+    @include color(black);
+  }
+}
+
+.portfolioTitle {
+  @media screen and (max-width: 767px) {
+    @include paddingDetail(20px, 0px, 20px, 0px !important);
+  }
+  @include text($size: 50px, $align: center, $weight: bold);
+  @include paddingDetail(20px, 0px, 0px, 0px !important);
+}
+
+.portfolioButton {
+  @include paddingDetail(75px, 0px, 0px, 0px !important);
+  @include text($size: 25px !important);
+  @include size(100%, 100%);
+}
+
+.aboutTitle {
+  @include text($size: 50px, $align: center, $weight: bold);
+  @include paddingDetail(20px, 0px, 20px, 0px !important);
+}
+
+.aboutPic {
+  @media screen and (max-width: 400px) {
+    img {
+      @include marginDetail(0px, 0px, 0px, 5% !important);
+      @include size(230px, 308px);
+    }
+  }
+  @media screen and (min-width: 401px) {
+    img {
+      @include marginDetail(0px, 0px, 0px, 5% !important);
+      @include size(263px, 350px);
+    }
+  }
+  @media screen and (min-width: 800px) and (max-width: 1279px) {
+    img {
+      @include marginDetail(0px, 0px, 0px, 5% !important);
+      @include size(300px, 400px);
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    img {
+      @include marginDetail(0px, 0px, 0px, 5% !important);
+      @include size(450px, 600px);
+    }
+  }
+
+  img {
+    @include marginDetail(0px, 0px, 30px, 5% !important);
+  }
+}
+
+.aboutParagraph {
+  .btn {
+    @include marginDetail(50px, 0px, 20px, 25% !important);
+    @include cursor(pointer);
+  }
+
+  p {
+    @include paddingDetail(0px, 5%, 0px, 5% !important);
+  }
+}

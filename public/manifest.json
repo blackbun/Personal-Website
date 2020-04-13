@@ -1,0 +1,15 @@
+{
+  "short_name": "Portfolio App",
+  "name": "Portfolio App",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#E8E8E8",
+  "background_color": "#E8E8E8"
+}

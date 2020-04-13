@@ -1,0 +1,422 @@
+body {
+  margin: 0px !important;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100vw; }
+
+.container {
+  width: 100vw !important;
+  margin: 0px !important;
+  padding: 0px !important; }
+
+.row {
+  margin: 0px !important; }
+
+.col-12 {
+  padding: 0px !important; }
+
+.myCarousel {
+  max-height: 900px; }
+  @media screen and (max-width: 767px) {
+    .myCarousel {
+      height: 250px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .myCarousel {
+      height: 400px; } }
+  @media screen and (min-width: 992px) and (max-width: 1279px) {
+    .myCarousel {
+      height: 750px; } }
+  @media screen and (min-width: 1280px) {
+    .myCarousel {
+      height: 900px; } }
+
+.myUcla {
+  background-color: #3284BF;
+  height: 500px; }
+  @media screen and (max-width: 767px) {
+    .myUcla {
+      height: 810px; } }
+  .myUcla .uclaTitle {
+    margin: 0px !important;
+    color: #ffe800;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    padding: 30px 0px 0px 0px !important; }
+    @media screen and (max-width: 991px) {
+      .myUcla .uclaTitle {
+        font-size: 45px; } }
+
+.myDeveloper {
+  color: black;
+  background-color: #E8E8E8;
+  height: 500px;
+  text-align: right;
+  padding: 99px 0px 0px 0px !important; }
+  @media screen and (max-width: 992px) {
+    .myDeveloper {
+      height: 425px; } }
+
+.devTitle {
+  width: 84%;
+  font-size: 100px;
+  padding: 80px 0px 0px 0px !important;
+  margin: 0px !important; }
+  @media screen and (max-width: 992px) {
+    .devTitle {
+      font-size: 60px; } }
+
+.devWord {
+  font-size: 55px;
+  width: 84%;
+  padding: 50px 0px 40px 0px !important;
+  margin: 0px !important; }
+  @media screen and (max-width: 992px) {
+    .devWord {
+      font-size: 40px; } }
+
+.myOregonState {
+  background-color: #dc4405; }
+  @media screen and (max-width: 400px) {
+    .myOregonState {
+      height: 880px; } }
+  @media screen and (min-width: 401px) {
+    .myOregonState {
+      height: 830px; } }
+  @media screen and (min-width: 768px) {
+    .myOregonState {
+      height: 500px; } }
+  .myOregonState .oregonStateTitle {
+    margin: 0px;
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    padding: 30px 0px 0px 0px !important; }
+    @media screen and (max-width: 991px) {
+      .myOregonState .oregonStateTitle {
+        font-size: 45px; } }
+
+.myDigitalFitnessApp {
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .myDigitalFitnessApp .btn {
+      font-size: 30px !important; } }
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+    .myDigitalFitnessApp .btn {
+      font-size: 45px !important; } }
+  @media screen and (min-width: 1280px) {
+    .myDigitalFitnessApp .btn {
+      font-size: 60px !important; } }
+  .myDigitalFitnessApp .btn {
+    cursor: pointer; }
+
+.myMrJumpyPenguinApp {
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .myMrJumpyPenguinApp .btn {
+      font-size: 30px !important; } }
+  @media screen and (min-width: 769px) and (max-width: 1279px) {
+    .myMrJumpyPenguinApp .btn {
+      font-size: 45px !important; } }
+  @media screen and (min-width: 1280px) {
+    .myMrJumpyPenguinApp .btn {
+      font-size: 60px !important; } }
+  .myMrJumpyPenguinApp .btn {
+    cursor: pointer; }
+
+.myNav {
+  color: white;
+  height: 100px;
+  background-color: black;
+  position: fixed !important;
+  top: 0px;
+  width: 100%;
+  z-index: 9999; }
+  .myNav ul {
+    padding: 0px !important; }
+
+.myMenuButton {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin: -15px 0px 0px 0px !important;
+  cursor: pointer; }
+  .myMenuButton.fas {
+    color: white; }
+
+.myLogo {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -32px 0px 0px -32px; }
+
+.mySidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  color: white;
+  z-index: 5555;
+  top: 100px;
+  left: 0px;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.3s; }
+  .mySidebar a {
+    padding: 10px 0px 10px 50px !important;
+    color: white;
+    display: block;
+    transition: 0.2s;
+    font-size: 22px;
+    text-align: left;
+    text-decoration: none; }
+  .mySidebar ul {
+    text-decoration: none;
+    padding: 0px !important; }
+  .mySidebar a:hover {
+    background-color: #303030;
+    text-decoration: none;
+    color: white; }
+
+.aboutPage {
+  padding: 99px 0px 0px 0px !important;
+  background-color: #E8E8E8;
+  height: 750px; }
+  @media screen and (max-width: 400px) {
+    .aboutPage {
+      height: 830px; } }
+
+.portfolioPage {
+  padding: 99px 0px 0px 0px !important;
+  background-color: #E8E8E8;
+  height: 900px; }
+
+.contactPage {
+  height: 1050px;
+  padding: 99px 0px 0px 0px !important;
+  background-color: #E8E8E8; }
+  @media screen and (max-width: 767px) {
+    .contactPage {
+      height: 625px; } }
+
+@media screen and (max-width: 767px) {
+  .carouselPic {
+    height: 250px; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .carouselPic {
+    height: 400px; } }
+
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+  .carouselPic {
+    height: 750px; } }
+
+@media screen and (min-width: 1280px) {
+  .carouselPic {
+    height: 900px; } }
+
+.myCourses {
+  padding: 50px 10px 0px 10px !important; }
+  @media screen and (max-width: 768px) {
+    .myCourses {
+      width: 90%;
+      padding: 50px 5px 0px 10% !important; } }
+  .myCourses ul {
+    max-height: 325px;
+    overflow-y: scroll; }
+  .myCourses li {
+    background-color: #D8D8D8;
+    padding: 25px 0px 25px 20px !important; }
+
+.mySchoolInfo {
+  padding: 100px 0px 0px 0px !important;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: black; }
+  @media screen and (max-width: 768px) {
+    .mySchoolInfo {
+      padding: 40px 0px 0px 0px !important; } }
+  @media screen and (min-width: 769px) and (max-width: 991px) {
+    .mySchoolInfo {
+      font-size: 30px; } }
+
+.myApps {
+  background-color: black;
+  height: 400px;
+  padding: 175px 0px 0px 0px !important; }
+  @media screen and (max-width: 991px) {
+    .myApps {
+      padding: 100px 0px 0px 0px !important; } }
+
+.myModal {
+  top: 20%; }
+  .myModal .modal-header {
+    border-bottom: none;
+    display: inline; }
+  .myModal .modal-content {
+    background-color: #E8E8E8; }
+  .myModal .modal-body {
+    padding: 15px !important; }
+  @media screen and (min-width: 768px) {
+    .myModal img {
+      height: 200px;
+      width: 200px; } }
+  @media screen and (min-width: 401px) {
+    .myModal img {
+      height: 150px;
+      width: 150px; } }
+  @media screen and (max-width: 400px) {
+    .myModal img {
+      height: 125px;
+      width: 125px; } }
+
+.myModalText {
+  padding: 0px 25px 0px 10px !important; }
+
+.myModalHeader h5 {
+  font-size: 35px !important;
+  text-align: center !important; }
+
+.cancelAppModal {
+  float: right;
+  margin: 0px 25px 0px 0px !important; }
+
+.myModalButtons {
+  padding: 10px 0px 0px 0px !important; }
+
+.contactImage img {
+  margin: 0px 0px 50px 10% !important;
+  border-radius: 10px; }
+  @media screen and (min-width: 951px) {
+    .contactImage img {
+      height: 667px;
+      width: 500px; } }
+  @media screen and (min-width: 768px) and (max-width: 950px) {
+    .contactImage img {
+      height: 533px;
+      width: 400px; } }
+  @media screen and (min-width: 391px) and (max-width: 767px) {
+    .contactImage img {
+      height: 267px;
+      width: 200px; } }
+  @media screen and (max-width: 390px) {
+    .contactImage img {
+      height: 200px;
+      width: 150px; } }
+
+.contactTitle {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0px 40px 0px !important; }
+
+.contactEmail {
+  font-size: 20px; }
+  @media screen and (max-width: 767px) {
+    .contactEmail {
+      padding: 20px 0px 0px 5% !important; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .contactEmail {
+      padding: 20px 0px 50px 25% !important; } }
+  @media screen and (min-width: 992px) {
+    .contactEmail {
+      padding: 20px 0px 50px 40% !important; } }
+
+.githubButton {
+  padding: 200px 0px 0px 5% !important; }
+  @media screen and (max-width: 767px) {
+    .githubButton {
+      padding: 30px 0px 0px 5% !important; } }
+  .githubButton .btn {
+    cursor: pointer; }
+  .githubButton a {
+    color: black;
+    text-decoration: none; }
+  .githubButton a:hover {
+    text-decoration: none;
+    color: black; }
+
+.linkedInButton {
+  padding: 100px 0px 0px 5% !important; }
+  @media screen and (max-width: 390px) {
+    .linkedInButton {
+      padding: 50px 0px 0px 5% !important; } }
+  .linkedInButton .btn {
+    cursor: pointer; }
+  .linkedInButton a {
+    color: black;
+    text-decoration: none; }
+  .linkedInButton a:hover {
+    text-decoration: none;
+    color: black; }
+
+.portfolioApp {
+  border: 1px solid black;
+  height: 200px;
+  width: 100%;
+  text-decoration: none;
+  padding: 0px !important; }
+  .portfolioApp a {
+    text-decoration: none;
+    color: black; }
+  .portfolioApp a:hover {
+    text-decoration: none;
+    color: black; }
+
+.portfolioTitle {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0px 0px 0px !important; }
+  @media screen and (max-width: 767px) {
+    .portfolioTitle {
+      padding: 20px 0px 20px 0px !important; } }
+
+.portfolioButton {
+  padding: 75px 0px 0px 0px !important;
+  font-size: 25px !important;
+  height: 100%;
+  width: 100%; }
+
+.aboutTitle {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0px 20px 0px !important; }
+
+@media screen and (max-width: 400px) {
+  .aboutPic img {
+    margin: 0px 0px 0px 5% !important;
+    height: 230px;
+    width: 308px; } }
+
+@media screen and (min-width: 401px) {
+  .aboutPic img {
+    margin: 0px 0px 0px 5% !important;
+    height: 263px;
+    width: 350px; } }
+
+@media screen and (min-width: 800px) and (max-width: 1279px) {
+  .aboutPic img {
+    margin: 0px 0px 0px 5% !important;
+    height: 300px;
+    width: 400px; } }
+
+@media screen and (min-width: 1280px) {
+  .aboutPic img {
+    margin: 0px 0px 0px 5% !important;
+    height: 450px;
+    width: 600px; } }
+
+.aboutPic img {
+  margin: 0px 0px 30px 5% !important; }
+
+.aboutParagraph .btn {
+  margin: 50px 0px 20px 25% !important;
+  cursor: pointer; }
+
+.aboutParagraph p {
+  padding: 0px 5% 0px 5% !important; }
