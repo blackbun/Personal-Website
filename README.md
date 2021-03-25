@@ -1,4 +1,3 @@
-## Personal Website
+## React Personal Website
 
-- React built modern web portfolio
-- Developed by Nicholas Blackburn
+- Developed by Nicholas Blackburn in 2018
